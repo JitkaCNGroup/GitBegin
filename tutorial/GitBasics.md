@@ -156,11 +156,16 @@ b. Restore Commit folder from CommitStart.zip and remove file with parameter `--
 
 ## Zobrazení historie revizí
 
-`$ git log`
 
-Použití Git Bash je méně obvyklé, méně přehledné. Podrobnější popis přikazu je zde  
-https://git-scm.com/book/cs/v2/Z%C3%A1klady-pr%C3%A1ce-se-syst%C3%A9mem-Git-Zobrazen%C3%AD-historie-reviz%C3%AD.   
-Pro sledování historie je vhodnější grafických nástrojů, např. SourceTree.
+`git log`  vypíše všechny revize daného repozitáře v obráceném chronologickém pořadí - poslední revize se zobrazí na začátku.
+
+`git log -<n>` vypíše n posledních revizí
+
+Podrobnější popis přikazu je zde:   
+https://git-scm.com/book/cs/v2/Z%C3%A1klady-pr%C3%A1ce-se-syst%C3%A9mem-Git-Zobrazen%C3%AD-historie-reviz%C3%AD.
+
+Použití příkazové řádky pro prohlížení historie je méně obvyklé a méně přehledné.
+Právě pro sledování historie je vhodnější grafických nástrojů, např. SourceTree.
 
 
 ## Návrat do předchozího stavu
@@ -225,7 +230,7 @@ Soubor v oblasti připravených změn vyjmem příkazem
 `git reset HEAD <file-name>`
 
 **Example in Git Bash:**  
-_Repository for example: CommtStart.zip_
+_Repository for example: CommitStart.zip_
 
 1. From staged area remove Hotel.java file.
 

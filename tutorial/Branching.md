@@ -2,41 +2,41 @@
 
 In Git Bash and in SourceTree
 
-Vìtvení znamená, e se mùete odlouèit od hlavní linie vıvoje a pokraèovat v práci, 
-ani byste do hlavní linie zasahovali. Git neukládá data jako sérii zmìn nebo rozdílù, 
-ale jako sérii snímkù. Tento snímek / objekt obsahuje jméno a e-mail autora, 
-zprávu  a odkazy na jeden nebo víc objektù revize, které této revizi pøímo pøedcházely (jeho rodièe): na ádného rodièe pro poèáteèní revizi, na jednoho rodièe pro bìnou revizi a na více rodièù pro revizi, která je vısledkem slouèení dvou nebo více vìtví.
+VÄ›tvenÃ­ znamenÃ¡, Å¾e se mÅ¯Å¾ete odlouÄit od hlavnÃ­ linie vÃ½voje a pokraÄovat v prÃ¡ci, 
+aniÅ¾ byste do hlavnÃ­ linie zasahovali. Git neuklÃ¡dÃ¡ data jako sÃ©rii zmÄ›n nebo rozdÃ­lÅ¯, 
+ale jako sÃ©rii snÃ­mkÅ¯. Tento snÃ­mek / objekt obsahuje jmÃ©no a e-mail autora, 
+zprÃ¡vu  a odkazy na jeden nebo vÃ­c objektÅ¯ revize, kterÃ© tÃ©to revizi pÅ™Ã­mo pÅ™edchÃ¡zely (jeho rodiÄe): na Å¾Ã¡dnÃ©ho rodiÄe pro poÄÃ¡teÄnÃ­ revizi, na jednoho rodiÄe pro bÄ›Å¾nou revizi a na vÃ­ce rodiÄÅ¯ pro revizi, kterÃ¡ je vÃ½sledkem slouÄenÃ­ dvou nebo vÃ­ce vÄ›tvÃ­.
 
-Dosud jsme pracovali jen s jednou  vìtví, øíkali jsme jí _master_ (vzniká pøi `git init`, 
-její název není nutné mìnit). Nyní vytvoøíme novou vìtev. Proè ? I kdy kod vyvíjí jednotlivec, 
-je velmi bezpeèné vyvíjet všechny nové funkce/opravy na vlastních vìtvích a pøitom mít 
-v hlavní vìtvi - _masteru_ - zachovanı funkèní kód.
+Dosud jsme pracovali jen s jednou  vÄ›tvÃ­, Å™Ã­kali jsme jÃ­ _master_ (vznikÃ¡ pÅ™i `git init`, 
+jejÃ­ nÃ¡zev nenÃ­ nutnÃ© mÄ›nit). NynÃ­ vytvoÅ™Ã­me novou vÄ›tev. ProÄ ? I kdyÅ¾ kod vyvÃ­jÃ­ jednotlivec, 
+je velmi bezpeÄnÃ© vyvÃ­jet vÅ¡echny novÃ© funkce/opravy na vlastnÃ­ch vÄ›tvÃ­ch a pÅ™itom mÃ­t 
+v hlavnÃ­ vÄ›tvi - _masteru_ - zachovanÃ½ funkÄnÃ­ kÃ³d.
 
-Jakmile pracujete v tımu, je pouívání vìtví naprosto nezbytnou záleitostí: 
-jen tak má toti kadı vıvojáø jistotu, e nepøepisuje kód nìkomu jinému. 
-Vytvoøení nové vìtve znamená vytvoøení nového ukazatele na aktuální revizi.
+Jakmile pracujete v tÃ½mu, je pouÅ¾Ã­vÃ¡nÃ­ vÄ›tvÃ­ naprosto nezbytnou zÃ¡leÅ¾itostÃ­: 
+jen tak mÃ¡ totiÅ¾ kaÅ¾dÃ½ vÃ½vojÃ¡Å™ jistotu, Å¾e nepÅ™episuje kÃ³d nÄ›komu jinÃ©mu. 
+VytvoÅ™enÃ­ novÃ© vÄ›tve znamenÃ¡ vytvoÅ™enÃ­ novÃ©ho ukazatele na aktuÃ¡lnÃ­ revizi.
   
 ## New branch
-Novou vìtev vytvoøíme pøíkazem
+Novou vÄ›tev vytvoÅ™Ã­me pÅ™Ã­kazem
  
 `git branch <branch-name>`
 
-Abychom v tomto místì mohli odklonit svoji práci, 
-musíme se do nové vìtve pøepnout. 
-To provedeme pøíkazem `checkout`.  
+Abychom v tomto mÃ­stÄ› mohli odklonit svoji prÃ¡ci, 
+musÃ­me se do novÃ© vÄ›tve pÅ™epnout. 
+To provedeme pÅ™Ã­kazem `checkout`.  
 
 `git checkout <branch-name>`
 
-_Pozn.: Pokud jsou v aktuálním pracovní vìtvi zmìnìné, ale neuloené soubory, 
-git vypíše varování a pøepnutí na jinou vìtev neprovede_
+_Pozn.: Pokud jsou v aktuÃ¡lnÃ­m pracovnÃ­ vÄ›tvi zmÄ›nÄ›nÃ©, ale neuloÅ¾enÃ© soubory, 
+git vypÃ­Å¡e varovÃ¡nÃ­ a pÅ™epnutÃ­ na jinou vÄ›tev neprovede_
  
-V nové vìtvi provedeme zmìny v kodu a potvrdíme je commitem.
+V novÃ© vÄ›tvi provedeme zmÄ›ny v kodu a potvrdÃ­me je commitem.
 
 `git commit -a`  
  
-Pøepneme do vìtve master `git checkout fix`, provedeme zmìny v kódu, napø. pøidáme soubor, 
-potvrdíme zmìnu a zøetelnì vidíme vìtvení.
-Seznam všech vìtví v repositáøi vypíšeme pøíkazem 
+PÅ™epneme do vÄ›tve master `git checkout fix`, provedeme zmÄ›ny v kÃ³du, napÅ™. pÅ™idÃ¡me soubor, 
+potvrdÃ­me zmÄ›nu a zÅ™etelnÄ› vidÃ­me vÄ›tvenÃ­.
+Seznam vÅ¡ech vÄ›tvÃ­ v repositÃ¡Å™i vypÃ­Å¡eme pÅ™Ã­kazem 
   
 `git branch`
 
@@ -69,9 +69,9 @@ Result is:
 
 ## Merge
 
-Vıpisem vìtví `git branch` zjistíme, e práce rozdìlila. 
-Zmìny provedené v obou vìtvích nyní chceme spojit do jedné. Vìtev _fix_ vloíme / pøipojíme do vìtve _master_ 
-pøíkazem `merge`. Jmenovaná vìtev se spojí s vìtví, ve které se právì nacházíme.
+VÃ½pisem vÄ›tvÃ­ `git branch` zjistÃ­me, Å¾e prÃ¡ce rozdÄ›lila. 
+ZmÄ›ny provedenÃ© v obou vÄ›tvÃ­ch nynÃ­ chceme spojit do jednÃ©. VÄ›tev _fix_ vloÅ¾Ã­me / pÅ™ipojÃ­me do vÄ›tve _master_ 
+pÅ™Ã­kazem `merge`. JmenovanÃ¡ vÄ›tev se spojÃ­ s vÄ›tvÃ­, ve kterÃ© se prÃ¡vÄ› nachÃ¡zÃ­me.
  
 `git merge <branch-name>`
 
@@ -169,9 +169,9 @@ on file, choose Resolve conflict / Launch External Tool. External merge tool win
 Result is:  
 ![MergeWithConflict](images/MergeWithConflict.JPG)
 
-## Rebase  (pøeskládání)  
+## Rebase  (pÅ™esklÃ¡dÃ¡nÃ­)  
 
-Rozdíl mezi merge a rebase
+RozdÃ­l mezi merge a rebase
  
  Merge   
  ![SchemaMerge](images/SchemaMerge.jpg)
@@ -180,24 +180,24 @@ Rozdíl mezi merge a rebase
  Rebase  
  ![SchemaRebase](images/SchemaRebase.jpg)
 
-Pøíkazem `rebase` vezmete všechny zmìny, které byly zapsány v jedné vìtvi
-a necháte je pøehrát na jinou vìtev. 
-Pouívá se pokud byla vìtev, ve které se provedly zmìny, 
-oddìlena z jiné vìtve (zpravidla _master_) pøed delší dobou, take v pùvodní vìtvi došlo ke zmìnám, 
-mùeme chtít místo viditelného slouèení vìtví aplikovat zmìny ze své vìtve 
-do hlavní vìtve.
+PÅ™Ã­kazem `rebase` vezmete vÅ¡echny zmÄ›ny, kterÃ© byly zapsÃ¡ny v jednÃ© vÄ›tvi
+a nechÃ¡te je pÅ™ehrÃ¡t na jinou vÄ›tev. 
+PouÅ¾Ã­vÃ¡ se pokud byla vÄ›tev, ve kterÃ© se provedly zmÄ›ny, 
+oddÄ›lena z jinÃ© vÄ›tve (zpravidla _master_) pÅ™ed delÅ¡Ã­ dobou, takÅ¾e v pÅ¯vodnÃ­ vÄ›tvi doÅ¡lo ke zmÄ›nÃ¡m, 
+mÅ¯Å¾eme chtÃ­t mÃ­sto viditelnÃ©ho slouÄenÃ­ vÄ›tvÃ­ aplikovat zmÄ›ny ze svÃ© vÄ›tve 
+do hlavnÃ­ vÄ›tve.
 
-Ve koneèném vısledku  není ádnı rozdíl mezi merge a rebase. Vısledkem rebase je však èistší historie.
-Pøíkaz pro pøeskládání je 
+Ve koneÄnÃ©m vÃ½sledku  nenÃ­ Å¾Ã¡dnÃ½ rozdÃ­l mezi merge a rebase. VÃ½sledkem rebase je vÅ¡ak ÄistÅ¡Ã­ historie.
+PÅ™Ã­kaz pro pÅ™esklÃ¡dÃ¡nÃ­ je 
 
 `git rebase <branch-name>`  
 
-Dojde-li ke konfliktu, podobnì jako v pøedchozím pøípadì pøi `merge`, opìt provedeme manuálnì 
-opravu souboru, pøidáme opravenı soubor do oblasti pøipravovanıch zmìn
+Dojde-li ke konfliktu, podobnÄ› jako v pÅ™edchozÃ­m pÅ™Ã­padÄ› pÅ™i `merge`, opÄ›t provedeme manuÃ¡lnÄ› 
+opravu souboru, pÅ™idÃ¡me opravenÃ½ soubor do oblasti pÅ™ipravovanÃ½ch zmÄ›n
 
-`git add <changed-file>`
+`git add <file-name>`
 
-a potvrdíme ukoèení pøíkazu rebase
+a potvrdÃ­me ukoÄenÃ­ pÅ™Ã­kazu rebase
 
 `git rebase --continue`  
 
@@ -223,9 +223,9 @@ _Repository for example: RebaseWithConflictStart.zip_
 
 1. Right click on master / Rebase current changes onto master  
 ![RebaseStart](images/RebaseStart.jpg)
- Merge conflict message is shown
-2. Resolve conflict with extern tool (some path as in merge was) 
-3. Finally click to “uncommitted changes”
+ Merge conflict message is shown.
+2. Resolve conflict with extern tool (use same steps as in the case merge-conflict,) 
+3. Finally click to â€œuncommitted changesâ€
 4. In main menu click Action / Continue rebase. 
  
  Result is:  
@@ -233,13 +233,13 @@ _Repository for example: RebaseWithConflictStart.zip_
   
 ## Delete branch
 
-pouíváme zpravidla ve chvíli, kdy ji vìtev nebudeme nadále potøebovat, protoe jsme ji zmergovali.  
-Ke smazání vìtve slouí atribut `–d`.  
+pouÅ¾Ã­vÃ¡me zpravidla ve chvÃ­li, kdy jiÅ¾ vÄ›tev nebudeme nadÃ¡le potÅ™ebovat, protoÅ¾e jsme ji zmergovali.  
+Ke smazÃ¡nÃ­ vÄ›tve slouÅ¾Ã­ atribut `â€“d`.  
  
- `git branch –d <branch_name>`
+ `git branch â€“d <branch_name>`
 
-Pokud vìtev nebyla namergovaná do jiné vìtve, pøíkaz vypíše varování a vìtev nezruší. 
-Pokud chceme vìtev opravdu zrušit, pouijeme parametr (velké) `-D`.
+Pokud vÄ›tev nebyla namergovanÃ¡ do jinÃ© vÄ›tve, pÅ™Ã­kaz vypÃ­Å¡e varovÃ¡nÃ­ a vÄ›tev nezruÅ¡Ã­. 
+Pokud chceme vÄ›tev opravdu zruÅ¡it, pouÅ¾ijeme parametr (velkÃ©) `-D`.
 
 **Example in Git Bash:**  
 _Repository for example: MergeStart.zip_

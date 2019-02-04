@@ -37,7 +37,7 @@ _git push origin master_
  
 ## Vyzvedávání a stahování ze vzdálených repozitářů
 
-`git fetch`
+`git fetch <name-of-remote-repository>`
 
 Vyzvedne veškerou novou práci, která byla na uvedený server poslána (vámi, nebo spíš někým jiným) 
 od okamžiku, kdy jste odtud klonovali nebo kdy jste odtud naposledy vyzvedávali práci. 
@@ -46,8 +46,10 @@ s prací, ani nezmění nic z toho, na čem právě pracujete.
 
 `git pull`
 
-vyzvedne data ze serveru (udělá totéž jako fetch), 
-a navíc se je pokusí začlenit do kódu, na němž právě pracujete.
+Vyzvedne data ze serveru (udělá totéž jako fetch), 
+a navíc se je pokusí začlenit do kódu, na němž právě pracujete. Jinak řečeno, `pull` je zkratka pro   
+`git fetch`  
+`git merge FETCH_HEAD`
 
 **Example in Git Bash:**  
 _Repository for example: InitClone_
@@ -118,7 +120,7 @@ Tagy lze vypsat příkazem
 
 `git tag`
 
-Vztvoření nové, anotované, značky se provede přidáním parametru -a.  
+Vytvoření nové, anotované, značky se provede přidáním parametru -a.  
 
 `git tag -a <tag-name> -m "<tag-description>"`
 
@@ -127,13 +129,18 @@ přidáním kontrolního součtu nebo jeho části za příkaz.
 
 `git tag -a v1.4 -m "my version 1.4"  39eff7c`
 
-Tagy lze odstraňovat, sdílet se vzdáleným repozitářem , 
-viz  https://git-scm.com/book/cs/v2/Z%C3%A1klady-pr%C3%A1ce-se-syst%C3%A9mem-Git-Pou%C5%BE%C3%ADv%C3%A1n%C3%AD-zna%C4%8Dek
+Tagy lze odstraňovat, sdílet se vzdáleným repozitářem. 
+Příkaz push však značky automaticky nepřenáší, je nutné je přenést explicitně příkazem    
+
+`git push origin <tag-name>`  pro jeden tag    
+`git push origin --tags`  pro všechny tagy
+
+Více viz  https://git-scm.com/book/cs/v2/Z%C3%A1klady-pr%C3%A1ce-se-syst%C3%A9mem-Git-Pou%C5%BE%C3%ADv%C3%A1n%C3%AD-zna%C4%8Dek
 
 **Example in Git Bash:**  
 _Repository for example: InitStart.zip_
 
-1. Add tag with dscription to the first init commit.
+1. Add tag with description to the first init commit.
 2. Show all tags
 
 <details>   

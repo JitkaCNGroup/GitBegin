@@ -1,5 +1,25 @@
 # Getting started.
 
+## Úvod
+**Git je systém pro správa verzí.** Zaznamenává změny souboru nebo sady souborů v čase.
+Umožní vrátit soubory zpět do předchozího stavu, 
+vrátit celý projekt do předchozího stavu, 
+porovnávat změny provedené v průběhu času, 
+zjistit, kdo naposledy upravil něco, 
+co nyní možná způsobuje problémy, 
+kdo a kdy vytvořil diskutabilní část a mnoho dalšího.
+
+Historie:  
+* Lokální systémy správy verzí
+* Centralizované systémy správy verzí
+* Distribuované systémy správy verzí - Git
+ 
+Několik důležitých pojmů:
+* Snímky, nikoli rozdíly
+* Většina operací je lokální
+* Intergita se udržuje pomocí kontrolních součtů
+* Tři stavy -  zapsáno (committed), změněno (modified) a připraveno k zapsání (staged).
+ 
 ## Download GitBegin tutorial
 
 * Go to URL: https://github.com/JitkaCNGroup/CNGitBegin   
@@ -8,6 +28,13 @@
 
 * Create  _user_home / repository_ folder.
 
+## Příkazový řádek
+
+Git se dá používat mnoha různými způsoby. 
+K dispozici jsou nástroje pro použití z příkazového řádku, existuje i řada různých grafických uživatelských rozhraní.
+V tomto kurzu budeme primárně používat příkazový řádek a zběžně se seznámíme s grafickým nástrojem SourceTree.
+
+ 
 ## Instalace GIT
 
 VIDEO: https://www.youtube.com/watch?v=SmbAn2_5uGs
@@ -15,7 +42,7 @@ VIDEO: https://www.youtube.com/watch?v=SmbAn2_5uGs
 * Go to URL: https://git-scm.com/downloads  
 * Download Git  
  
-To check correct installation, run Git Bash, run command  
+To check correct installation, run Start / Git Bash, run command  
   
 `git --version`  
 
@@ -24,8 +51,8 @@ Answer should look like this: _git version 2.17.0.windows.1_
 ### Nápověda 
 Nápovědu Git-u a nápovědu pro jednotlivé příkazy je k dispozici v příkazové řádce:
 
-`git help`  
-`git help pull`
+`git help`      display help information about Git  
+`git help <command>`   display help information about command
 
 **Example in Git Bash:**  
 1. Get help for command _commit_ 
@@ -41,8 +68,8 @@ Nápovědu Git-u a nápovědu pro jednotlivé příkazy je k dispozici v příka
 je první krok nutný pro práci s Git-em.   
 VIDEO: https://www.youtube.com/watch?v=tq1Rmkz0XIo
 
-`git config – global user.name "Jmeno Prijmeni"`  
-`git config – global user.email "Prijmeni@gmail.com"`
+`git config –-global user.name <first-name last-name>`  
+`git config –-global user.email <email@gmail.com>`
 
 Kontrola nastavení:
 
@@ -123,7 +150,7 @@ Přidejme všechny soubory projektu ke sledování (více bude vysvětleno v dal
 
 a vytvořte první revizi / commit s popisem
 
-`git commit -m '<text>'`
+`git commit -m "<text>"`
 
 **Example in Git Bash:**
 _Directory for example: FilesStart.zip_
@@ -142,7 +169,7 @@ _Directory for example: FilesStart.zip_
     `cd Init` ("Init" here is name of folder)
   2. `git init` ("init" here is command)
   3. `git add -A`
-  4. `git commit -m 'First commit'`
+  4. `git commit -m "First commit"`
 
 </details> 
 
@@ -201,7 +228,7 @@ Poslední krok v této kapitule bude krok opačný:
 
 Využívá se v případě, že např. chcete začít přispívat do již existujícího projektu. Používá se příkaz  
 
-`git clone` 
+`git clone <repo url>` 
 
 Příkaz vytvoří adresář projektu, inicializuje v něm adresář .git, stáhne všechna data pro tento repozitář a vytvoří pracovní kopii nejnovější verze.
 
