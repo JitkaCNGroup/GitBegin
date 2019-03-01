@@ -1,6 +1,7 @@
 # Git Basics.
 
 ## Nahrávání změn do repozitáře
+Úplná dokumentace k následující kapitole:  
 URL: https://git-scm.com/book/cs/v2/Z%C3%A1klady-pr%C3%A1ce-se-syst%C3%A9mem-Git-Nahr%C3%A1v%C3%A1n%C3%AD-zm%C4%9Bn-do-repozit%C3%A1%C5%99e 
 
 Každý soubor v pracovním adresáři může být v jednou ze dvou stavů: 
@@ -18,8 +19,6 @@ se provádí příkazem
 
 JInak řečeno - příkaz zobrazuje status pracovního stromu. 
 Má velké množství parametrů, které jsou zmíněny v dokumentaci: https://git-scm.com/docs/git-status
- 
-VIDEO: https://www.youtube.com/watch?v=HVsySz-h9r4
 
 ### Přidání souborů ke sledování
 
@@ -30,7 +29,7 @@ se provádí příkazem `add`
 **Example in Git Bash:**  
 _Repository for example: Init.zip_, Room.java file
 
-1. Add Room.java file  to Git repository
+1. Add _Room.java_ file from _code examples_ folder to the Git repository
 2. Move it into the tracking area  
 
 <details>
@@ -264,3 +263,5 @@ se seznamem masek pro ignorované soubory.
 _Pozn. Nepomohlo? Soubory stále zůstávají ve staged area?  
 Zkuste `git rm -r –cached`, např. `git rm -r --cached .idea`_
 
+
+VIDEO: https://www.youtube.com/watch?v=HVsySz-h9r4

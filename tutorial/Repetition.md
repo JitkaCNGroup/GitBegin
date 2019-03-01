@@ -1,0 +1,4 @@
+ # Repetition
+
+ Look at video:
+ https://www.youtube.com/watch?v=HVsySz-h9r4

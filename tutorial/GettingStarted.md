@@ -22,7 +22,7 @@ Několik důležitých pojmů:
  
 ## Download GitBegin tutorial
 
-* Go to URL: https://github.com/JitkaCNGroup/CNGitBegin   
+* Go to URL: https://github.com/JitkaCNGroup/GitBegin   
 * Click **_Clone or download  / Download ZIP_**  
 * Unpack it e.g to the _user-home / Document_ folder. 
 
@@ -89,6 +89,10 @@ Kontrola nastavení:
 </details>
 
 ### Nastavení editoru
+
+Textový editor se používá, když Git chce, abyste zapsali nějakou zprávu. 
+Pokud nastavení editoru nezměníte, bude Git používat výchozí editor vašeho systému, 
+jímž je většinou Vi nebo Vim (a s těmi se nepracuje úplně pohodlně).   
 
 Download Notepad++ from 
 URL: https://notepad-plus-plus.org/download/v7.6.2.html and set it for Git:
